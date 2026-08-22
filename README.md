@@ -1,85 +1,204 @@
-# Malak — Portfolio (React + Vite)
+# Malak — Portfolio
 
-بورتفوليو مبني بـ **React** (باستخدام Vite) — تصميم bento grid داكن مع لمسة برتقالية.
+A modern and responsive personal portfolio built with **React + Vite**, showcasing my projects, technical skills, and experience as a Full-Stack Developer.
 
-## 1) المتطلبات (Requirements)
-لازم يكون عندك **Node.js** (نسخة 18 أو أحدث) مثبت على جهازك.
-تأكد بـ:
+## ✨ Features
+
+* 🎨 Modern and responsive UI
+* 🌍 Multilingual support: **English / French / Arabic**
+* 🌙 Dark / Light mode
+* 💻 Projects showcase
+* 🛠️ Technical skills section
+* 📩 Contact form
+* 📱 Responsive design for desktop, tablet, and mobile
+* ✨ Smooth reveal animations
+* 🔗 GitHub, Telegram, and Email links
+
+## 🛠️ Technologies
+
+### Frontend
+
+* React
+* JavaScript
+* HTML5
+* CSS3
+* Tailwind CSS
+
+### Backend & APIs
+
+* PHP
+* Laravel
+* REST API
+
+### Mobile
+
+* Flutter
+
+### Database
+
+* MySQL
+
+### Tools
+
+* Git / GitHub
+* Figma
+* WordPress
+* DBeaver
+
+## 🚀 Getting Started
+
+### Requirements
+
+Make sure you have **Node.js 18 or newer** installed.
+
+Check your versions:
+
 ```bash
 node -v
 npm -v
 ```
-إذا ماعندكش Node، حمّلو من: https://nodejs.org
 
-## 2) فتح المشروع لأول مرة (First-time setup)
-1. فك ضغط الملف (unzip) اللي حملتيه.
-2. افتح Terminal / CMD جوا مجلد المشروع (`malak-portfolio`).
-3. ثبت الحزم (dependencies):
+If Node.js is not installed, download it from the official website:
+
+https://nodejs.org
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/malak822/malak-portfolio26.git
+```
+
+Open the project folder:
+
+```bash
+cd malak-portfolio26
+```
+
+Install the dependencies:
+
 ```bash
 npm install
 ```
 
-## 3) تشغيل المشروع محلياً (Development)
+### Run the project
+
+Start the development server:
+
 ```bash
 npm run dev
 ```
-راح يعطيك رابط كيما `http://localhost:5173` — افتحيه في المتصفح، وكل تعديل تديريه في الكود يبان مباشرة (hot reload).
 
-## 4) إضافة صورك (Add your images)
-حط الصور التالية جوا مجلد **public/** (بنفس الأسماء):
-- `profile1.jpg` — صورتك الشخصية (تظهر في Hero و About و Contact)
-- `discover-fashion-app.png` — موجودة معاك، ضيفيها
-- `Screenshotporfil.png` — صورة مشروع الوصفات
-- `RealEstate.png` — صورة مشروع العقارات
-- `cv.pdf` — ملف الـ CV تاعك (باش يخدم زر "Download CV")
+Then open the URL displayed in your terminal, usually:
 
-## 5) بناء نسخة الإنتاج (Production build)
-كي تكوني رايحة تنشري الموقع:
+```text
+http://localhost:5173
+```
+
+The application supports hot reload, so changes made to the code will appear automatically in the browser.
+
+## 📁 Project Structure
+
+```text
+malak-portfolio26/
+├── public/
+│   └── images and static files
+│
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Footer.jsx
+│   │   └── GirlIllustration.jsx
+│   │
+│   ├── context/
+│   │   └── AppContext.jsx
+│   │
+│   ├── data/
+│   │   └── translations.js
+│   │
+│   ├── hooks/
+│   │   └── useReveal.js
+│   │
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
+```
+
+## 💼 Featured Projects
+
+### 🏠 Real Estate Marketplace
+
+A real estate platform for browsing and managing property listings.
+
+**Technologies:** React, Laravel
+
+### 👗 Discover Fashion
+
+A mobile application focused on discovering fashion products and content.
+
+**Technologies:** Flutter, Laravel API
+
+### 🍴 Recettes Gourmandes
+
+A recipe platform for discovering, sharing, and managing cooking recipes.
+
+**Technologies:** Laravel, MySQL
+
+## 📦 Production Build
+
+To create a production-ready version:
+
 ```bash
 npm run build
 ```
-راح ينشئلك مجلد `dist/` فيه كل ملفات الموقع النهائية (HTML/CSS/JS مضغوطين وجاهزين).
 
-للتأكد أن البناء يخدم صحيح قبل النشر:
+The generated files will be placed inside the `dist/` directory.
+
+To preview the production build locally:
+
 ```bash
 npm run preview
 ```
 
-## 6) النشر (Deployment)
-تقدري تنشري مجلد `dist/` في أي من هاذو:
-- **Vercel**: `npm i -g vercel` ثم `vercel` جوا المجلد
-- **Netlify**: اسحبي مجلد `dist/` مباشرة فوق netlify.com/drop
-- **GitHub Pages**: بواسطة الأمر `npm run build` ثم رفع محتوى `dist/`
+## 🌐 Deployment
 
-## هيكلة المشروع (Project structure)
-```
-malak-portfolio/
-├── index.html              ← نقطة الدخول تع Vite
-├── package.json
-├── vite.config.js
-├── public/                 ← حطي هنا صورك (profile1.jpg, ...)
-└── src/
-    ├── main.jsx             ← نقطة انطلاق React
-    ├── App.jsx               ← يجمع كل الأقسام
-    ├── index.css             ← كل الـ styling
-    ├── context/
-    │   └── AppContext.jsx    ← يدير اللغة (EN/FR/AR) والـ theme (dark/light) والقائمة
-    ├── data/
-    │   └── translations.js   ← نصوص الموقع بالثلاث لغات
-    ├── hooks/
-    │   └── useReveal.js      ← أنيميشن الظهور عند السكرول
-    └── components/
-        ├── Navbar.jsx
-        ├── Hero.jsx
-        ├── GirlIllustration.jsx  ← رسمة SVG أصلية (مو منسوخة)
-        ├── About.jsx
-        ├── Skills.jsx
-        ├── Projects.jsx
-        ├── Contact.jsx
-        └── Footer.jsx
+This project can be deployed using platforms such as:
+
+* Vercel
+* Netlify
+* GitHub Pages
+
+For example, with Vercel:
+
+```bash
+npm i -g vercel
+vercel
 ```
 
-## ملاحظات
-- الرسمة الكرتونية (GirlIllustration) هي SVG أصلي كتبتلك إياه بالكامل، تقدري تعدلي فيه الألوان أو الشكل بحرية من جوا الملف `GirlIllustration.jsx`.
-- تبديل اللغة والـ theme يخدم عبر React state (Context)، ماشي عبر تلاعب مباشر بالـ DOM كيما كان في نسخة HTML القديمة.
-- الفورم تاع Contact يفتح تطبيق البريد (mailto:) عند الضغط على "Send Message" — إذا تحبي إرسال حقيقي عبر سيرفر (بدون فتح تطبيق mail)، يلزم backend أو خدمة كيما Formspree/EmailJS.
+## 📬 Contact
+
+**Malak — Full-Stack Developer**
+
+* 📧 Email: [malak.serinee@gmail.com](mailto:malak.serinee@gmail.com)
+* 💻 GitHub: https://github.com/malak822
+* 📱 Telegram: Available through the portfolio
+
+## 📄 License
+
+
+This project is a personal portfolio. All rights reserved.
+
+---
+
+⭐ If you like this portfolio, feel free to explore the projects and connect with me!
